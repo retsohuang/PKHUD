@@ -24,7 +24,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         super.init(frame: frame)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
@@ -40,7 +40,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         super.init(frame: frame)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
@@ -52,7 +52,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         commonInit(text)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit("")
     }
@@ -87,7 +87,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         commonInit(image)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit(nil)
     }
@@ -117,7 +117,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         super.init(image: UIImage(named: "progress"))
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -152,7 +152,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         self.commonInit()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -177,7 +177,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         commonInit(title)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit("");
     }
@@ -192,8 +192,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         
         let viewWidth: CGFloat = bounds.size.width
         let viewHeight: CGFloat = bounds.size.height
-        
-        let halfHeight = CGFloat(ceilf(CFloat(viewHeight / 2.0)))
+
         let quarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0)))
         let threeQuarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0 * 3.0)))
         
@@ -219,7 +218,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         commonInit(subtitle)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit("");
     }
@@ -234,8 +233,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         
         let viewWidth: CGFloat = bounds.size.width
         let viewHeight: CGFloat = bounds.size.height
-        
-        let halfHeight = CGFloat(ceilf(CFloat(viewHeight / 2.0)))
+
         let quarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0)))
         let threeQuarterHeight = CGFloat(ceilf(CFloat(viewHeight / 4.0 * 3.0)))
         
@@ -263,7 +261,7 @@ private let defaultSquareFrame = CGRect(origin: CGPointZero, size: CGSize(width:
         commonInit(title, subtitle: subtitle)
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit("", subtitle: "")
     }

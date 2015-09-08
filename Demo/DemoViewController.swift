@@ -62,10 +62,10 @@ class DemoViewController: UIViewController {
             self.showTitleHUD(sender)
         }
     }
-    
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
-    }
+
+  override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+    return UIInterfaceOrientationMask.AllButUpsideDown
+  }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
